@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DEBB544C29BB510431E88AD /* libPods-EagleDining.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FACDE85D71AC27872BDCC1 /* libPods-EagleDining.a */; };
+		59069FF821A3D34800C286AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59069FF721A3D34800C286AF /* AppDelegate.swift */; };
+		59069FFA21A3D34800C286AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59069FF921A3D34800C286AF /* ViewController.swift */; };
+		59069FFD21A3D34800C286AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59069FFB21A3D34800C286AF /* Main.storyboard */; };
+		59069FFF21A3D34A00C286AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59069FFE21A3D34A00C286AF /* Assets.xcassets */; };
+		5906A00221A3D34A00C286AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5906A00021A3D34A00C286AF /* LaunchScreen.storyboard */; };
+		5906A00D21A3D34B00C286AF /* EagleDiningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5906A00C21A3D34B00C286AF /* EagleDiningTests.swift */; };
+		5906A01821A3D34B00C286AF /* EagleDiningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5906A01721A3D34B00C286AF /* EagleDiningUITests.swift */; };
+		5906A02621A3D40D00C286AF /* MacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5906A02521A3D40D00C286AF /* MacViewController.swift */; };
+		5970D3F82207F42600B06325 /* LowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5970D3F72207F42600B06325 /* LowerViewController.swift */; };
+		5979C1F4221E44010043AD84 /* AddiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1F3221E44010043AD84 /* AddiesViewController.swift */; };
+		5979C1F6221E44100043AD84 /* TheRatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1F5221E44100043AD84 /* TheRatViewController.swift */; };
+		5979C1F8221E44280043AD84 /* ChocolateBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1F7221E44280043AD84 /* ChocolateBarViewController.swift */; };
+		5979C1FA221E44380043AD84 /* NewtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1F9221E44380043AD84 /* NewtonViewController.swift */; };
+		5979C1FC221E444C0043AD84 /* HillsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1FB221E444C0043AD84 /* HillsideViewController.swift */; };
+		5979C1FE221E448A0043AD84 /* EaglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1FD221E448A0043AD84 /* EaglesViewController.swift */; };
+		5979C2002220554F0043AD84 /* ReportIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1FF2220554F0043AD84 /* ReportIssueViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5906A00921A3D34B00C286AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59069FEC21A3D34700C286AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59069FF321A3D34800C286AF;
+			remoteInfo = EagleDining;
+		};
+		5906A01421A3D34B00C286AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59069FEC21A3D34700C286AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59069FF321A3D34800C286AF;
+			remoteInfo = EagleDining;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4322F4DD4881208DE7DDB833 /* Pods-EagleDining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleDining.release.xcconfig"; path = "Target Support Files/Pods-EagleDining/Pods-EagleDining.release.xcconfig"; sourceTree = "<group>"; };
+		59069FF421A3D34800C286AF /* EagleDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59069FF721A3D34800C286AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59069FF921A3D34800C286AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59069FFC21A3D34800C286AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59069FFE21A3D34A00C286AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5906A00121A3D34A00C286AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5906A00321A3D34A00C286AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5906A00821A3D34B00C286AF /* EagleDiningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EagleDiningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5906A00C21A3D34B00C286AF /* EagleDiningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleDiningTests.swift; sourceTree = "<group>"; };
+		5906A00E21A3D34B00C286AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5906A01321A3D34B00C286AF /* EagleDiningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EagleDiningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5906A01721A3D34B00C286AF /* EagleDiningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleDiningUITests.swift; sourceTree = "<group>"; };
+		5906A01921A3D34B00C286AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5906A02521A3D40D00C286AF /* MacViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacViewController.swift; sourceTree = "<group>"; };
+		5970D3F72207F42600B06325 /* LowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LowerViewController.swift; path = ../LowerViewController.swift; sourceTree = "<group>"; };
+		5979C1F3221E44010043AD84 /* AddiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddiesViewController.swift; sourceTree = "<group>"; };
+		5979C1F5221E44100043AD84 /* TheRatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRatViewController.swift; sourceTree = "<group>"; };
+		5979C1F7221E44280043AD84 /* ChocolateBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateBarViewController.swift; sourceTree = "<group>"; };
+		5979C1F9221E44380043AD84 /* NewtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonViewController.swift; sourceTree = "<group>"; };
+		5979C1FB221E444C0043AD84 /* HillsideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HillsideViewController.swift; sourceTree = "<group>"; };
+		5979C1FD221E448A0043AD84 /* EaglesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaglesViewController.swift; sourceTree = "<group>"; };
+		5979C1FF2220554F0043AD84 /* ReportIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssueViewController.swift; sourceTree = "<group>"; };
+		95FACDE85D71AC27872BDCC1 /* libPods-EagleDining.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EagleDining.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9E7A01B04E63C428B426885 /* Pods-EagleDining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleDining.debug.xcconfig"; path = "Target Support Files/Pods-EagleDining/Pods-EagleDining.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59069FF121A3D34800C286AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEBB544C29BB510431E88AD /* libPods-EagleDining.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5906A00521A3D34B00C286AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5906A01021A3D34B00C286AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59069FEB21A3D34700C286AF = {
+			isa = PBXGroup;
+			children = (
+				59069FF621A3D34800C286AF /* EagleDining */,
+				5906A00B21A3D34B00C286AF /* EagleDiningTests */,
+				5906A01621A3D34B00C286AF /* EagleDiningUITests */,
+				59069FF521A3D34800C286AF /* Products */,
+				D6553188EDD0C9707048B0C0 /* Frameworks */,
+				D718AA6168755D97562E6882 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		59069FF521A3D34800C286AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59069FF421A3D34800C286AF /* EagleDining.app */,
+				5906A00821A3D34B00C286AF /* EagleDiningTests.xctest */,
+				5906A01321A3D34B00C286AF /* EagleDiningUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59069FF621A3D34800C286AF /* EagleDining */ = {
+			isa = PBXGroup;
+			children = (
+				59069FFB21A3D34800C286AF /* Main.storyboard */,
+				59069FF721A3D34800C286AF /* AppDelegate.swift */,
+				59069FF921A3D34800C286AF /* ViewController.swift */,
+				5906A02521A3D40D00C286AF /* MacViewController.swift */,
+				5970D3F72207F42600B06325 /* LowerViewController.swift */,
+				5979C1F3221E44010043AD84 /* AddiesViewController.swift */,
+				5979C1F5221E44100043AD84 /* TheRatViewController.swift */,
+				5979C1FD221E448A0043AD84 /* EaglesViewController.swift */,
+				5979C1F9221E44380043AD84 /* NewtonViewController.swift */,
+				5979C1FB221E444C0043AD84 /* HillsideViewController.swift */,
+				5979C1F7221E44280043AD84 /* ChocolateBarViewController.swift */,
+				5979C1FF2220554F0043AD84 /* ReportIssueViewController.swift */,
+				59069FFE21A3D34A00C286AF /* Assets.xcassets */,
+				5906A00021A3D34A00C286AF /* LaunchScreen.storyboard */,
+				5906A00321A3D34A00C286AF /* Info.plist */,
+			);
+			path = EagleDining;
+			sourceTree = "<group>";
+		};
+		5906A00B21A3D34B00C286AF /* EagleDiningTests */ = {
+			isa = PBXGroup;
+			children = (
+				5906A00C21A3D34B00C286AF /* EagleDiningTests.swift */,
+				5906A00E21A3D34B00C286AF /* Info.plist */,
+			);
+			path = EagleDiningTests;
+			sourceTree = "<group>";
+		};
+		5906A01621A3D34B00C286AF /* EagleDiningUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5906A01721A3D34B00C286AF /* EagleDiningUITests.swift */,
+				5906A01921A3D34B00C286AF /* Info.plist */,
+			);
+			path = EagleDiningUITests;
+			sourceTree = "<group>";
+		};
+		D6553188EDD0C9707048B0C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95FACDE85D71AC27872BDCC1 /* libPods-EagleDining.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D718AA6168755D97562E6882 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9E7A01B04E63C428B426885 /* Pods-EagleDining.debug.xcconfig */,
+				4322F4DD4881208DE7DDB833 /* Pods-EagleDining.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59069FF321A3D34800C286AF /* EagleDining */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5906A01C21A3D34B00C286AF /* Build configuration list for PBXNativeTarget "EagleDining" */;
+			buildPhases = (
+				70A21B54B9DB1270ABCDBC97 /* [CP] Check Pods Manifest.lock */,
+				59069FF021A3D34800C286AF /* Sources */,
+				59069FF121A3D34800C286AF /* Frameworks */,
+				59069FF221A3D34800C286AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EagleDining;
+			productName = EagleDining;
+			productReference = 59069FF421A3D34800C286AF /* EagleDining.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5906A00721A3D34B00C286AF /* EagleDiningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5906A01F21A3D34B00C286AF /* Build configuration list for PBXNativeTarget "EagleDiningTests" */;
+			buildPhases = (
+				5906A00421A3D34B00C286AF /* Sources */,
+				5906A00521A3D34B00C286AF /* Frameworks */,
+				5906A00621A3D34B00C286AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5906A00A21A3D34B00C286AF /* PBXTargetDependency */,
+			);
+			name = EagleDiningTests;
+			productName = EagleDiningTests;
+			productReference = 5906A00821A3D34B00C286AF /* EagleDiningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5906A01221A3D34B00C286AF /* EagleDiningUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5906A02221A3D34B00C286AF /* Build configuration list for PBXNativeTarget "EagleDiningUITests" */;
+			buildPhases = (
+				5906A00F21A3D34B00C286AF /* Sources */,
+				5906A01021A3D34B00C286AF /* Frameworks */,
+				5906A01121A3D34B00C286AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5906A01521A3D34B00C286AF /* PBXTargetDependency */,
+			);
+			name = EagleDiningUITests;
+			productName = EagleDiningUITests;
+			productReference = 5906A01321A3D34B00C286AF /* EagleDiningUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59069FEC21A3D34700C286AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Jack Antico";
+				TargetAttributes = {
+					59069FF321A3D34800C286AF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5906A00721A3D34B00C286AF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 59069FF321A3D34800C286AF;
+					};
+					5906A01221A3D34B00C286AF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 59069FF321A3D34800C286AF;
+					};
+				};
+			};
+			buildConfigurationList = 59069FEF21A3D34700C286AF /* Build configuration list for PBXProject "EagleDining" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59069FEB21A3D34700C286AF;
+			productRefGroup = 59069FF521A3D34800C286AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59069FF321A3D34800C286AF /* EagleDining */,
+				5906A00721A3D34B00C286AF /* EagleDiningTests */,
+				5906A01221A3D34B00C286AF /* EagleDiningUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59069FF221A3D34800C286AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5906A00221A3D34A00C286AF /* LaunchScreen.storyboard in Resources */,
+				59069FFF21A3D34A00C286AF /* Assets.xcassets in Resources */,
+				59069FFD21A3D34800C286AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5906A00621A3D34B00C286AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5906A01121A3D34B00C286AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70A21B54B9DB1270ABCDBC97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EagleDining-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59069FF021A3D34800C286AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5979C1F8221E44280043AD84 /* ChocolateBarViewController.swift in Sources */,
+				5979C1F4221E44010043AD84 /* AddiesViewController.swift in Sources */,
+				5979C1FC221E444C0043AD84 /* HillsideViewController.swift in Sources */,
+				5979C2002220554F0043AD84 /* ReportIssueViewController.swift in Sources */,
+				5970D3F82207F42600B06325 /* LowerViewController.swift in Sources */,
+				59069FFA21A3D34800C286AF /* ViewController.swift in Sources */,
+				5906A02621A3D40D00C286AF /* MacViewController.swift in Sources */,
+				5979C1F6221E44100043AD84 /* TheRatViewController.swift in Sources */,
+				5979C1FE221E448A0043AD84 /* EaglesViewController.swift in Sources */,
+				59069FF821A3D34800C286AF /* AppDelegate.swift in Sources */,
+				5979C1FA221E44380043AD84 /* NewtonViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5906A00421A3D34B00C286AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5906A00D21A3D34B00C286AF /* EagleDiningTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5906A00F21A3D34B00C286AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5906A01821A3D34B00C286AF /* EagleDiningUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5906A00A21A3D34B00C286AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59069FF321A3D34800C286AF /* EagleDining */;
+			targetProxy = 5906A00921A3D34B00C286AF /* PBXContainerItemProxy */;
+		};
+		5906A01521A3D34B00C286AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59069FF321A3D34800C286AF /* EagleDining */;
+			targetProxy = 5906A01421A3D34B00C286AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59069FFB21A3D34800C286AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59069FFC21A3D34800C286AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5906A00021A3D34A00C286AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5906A00121A3D34A00C286AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5906A01A21A3D34B00C286AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5906A01B21A3D34B00C286AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5906A01D21A3D34B00C286AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E7A01B04E63C428B426885 /* Pods-EagleDining.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EagleDining/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Antico.EagleDining";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5906A01E21A3D34B00C286AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4322F4DD4881208DE7DDB833 /* Pods-EagleDining.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EagleDining/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Antico.EagleDining";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5906A02021A3D34B00C286AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EagleDiningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Antico.EagleDiningTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EagleDining.app/EagleDining";
+			};
+			name = Debug;
+		};
+		5906A02121A3D34B00C286AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EagleDiningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Antico.EagleDiningTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EagleDining.app/EagleDining";
+			};
+			name = Release;
+		};
+		5906A02321A3D34B00C286AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EagleDiningUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Antico.EagleDiningUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EagleDining;
+			};
+			name = Debug;
+		};
+		5906A02421A3D34B00C286AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EagleDiningUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Antico.EagleDiningUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EagleDining;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59069FEF21A3D34700C286AF /* Build configuration list for PBXProject "EagleDining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5906A01A21A3D34B00C286AF /* Debug */,
+				5906A01B21A3D34B00C286AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5906A01C21A3D34B00C286AF /* Build configuration list for PBXNativeTarget "EagleDining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5906A01D21A3D34B00C286AF /* Debug */,
+				5906A01E21A3D34B00C286AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5906A01F21A3D34B00C286AF /* Build configuration list for PBXNativeTarget "EagleDiningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5906A02021A3D34B00C286AF /* Debug */,
+				5906A02121A3D34B00C286AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5906A02221A3D34B00C286AF /* Build configuration list for PBXNativeTarget "EagleDiningUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5906A02321A3D34B00C286AF /* Debug */,
+				5906A02421A3D34B00C286AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59069FEC21A3D34700C286AF /* Project object */;
+}

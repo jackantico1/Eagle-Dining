@@ -1,0 +1,6 @@
+platform :ios, '9.0'
+
+target 'EagleDining' do
+    pod 'Alamofire', '~> 4.0'
+    pod 'SwiftSoup'
+end

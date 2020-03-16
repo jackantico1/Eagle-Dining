@@ -1,0 +1,6 @@
+module Pods_EagleDining {
+  umbrella header "Pods-EagleDining-umbrella.h"
+
+  export *
+  module * { export * }
+}
