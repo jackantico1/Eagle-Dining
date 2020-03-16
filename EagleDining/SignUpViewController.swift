@@ -18,7 +18,7 @@ class SignUpController: UIViewController {
     @IBOutlet weak var agoraPasswordField: UITextField!
     @IBOutlet weak var classYearSegment: UISegmentedControl!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,6 +31,10 @@ class SignUpController: UIViewController {
         let agoraPassword = agoraPasswordField?.text ?? "Invalid Agora Password"
         let classYear = classYearSegment.selectedSegmentIndex
         
+        let defaults = UserDefaults.standard
+        defaults.set(agoraUsername, forKey: defaultsKeys.agoraUsername)
+        defaults.set(agoraPassword, forKey: defaultsKeys.agoraPassword)
+        
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let user = authResult?.user, error == nil {
                 
@@ -39,13 +43,13 @@ class SignUpController: UIViewController {
                 ref.child("users/\(user.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
                     ref.child("users/\(user.uid)").setValue(["agoraUsername": agoraUsername, "agoraPassword": agoraPassword, "email": email, "classYear": classYear])
                 }) { (error) in
-                    print("ERROR (SignUpViewController):" + error.localizedDescription)
+                    print("ERROR (SignUpViewController1):" + error.localizedDescription)
                 }
                 
                 self.performSegue(withIdentifier: "segueFromSignUpToMain", sender: nil)
             } else {
                 let alert = UIAlertController(title: "ERROR!!!", message: "\(error!.localizedDescription)", preferredStyle: UIAlertController.Style.alert)
-                print("ERROR (SignUpController): Couldn't make the user")
+                print("ERROR (SignUpController2): Couldn't make the user")
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

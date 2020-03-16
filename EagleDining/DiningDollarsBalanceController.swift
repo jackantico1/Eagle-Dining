@@ -51,4 +51,19 @@ class DiningDollarsBalanceController: UIViewController {
                         }
         }
     }
+    
+    @IBAction func signOutPressed(_ sender: UIButton) {
+        do {
+          try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+          let alert = UIAlertController(title: "Error", message: "\(signOutError)", preferredStyle: UIAlertController.Style.alert)
+          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        if Auth.auth().currentUser == nil {
+            performSegue(withIdentifier: "segueFromDiningDollarsToHome", sender: self)
+        }
+    }
+    
 }

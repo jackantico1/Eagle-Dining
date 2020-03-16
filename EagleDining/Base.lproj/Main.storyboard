@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TCV-hw-sMt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -111,7 +111,7 @@
                                     <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DmA-zW-9OG" kind="presentation" id="mrz-3b-sJ7"/>
+                                    <action selector="diningDollarPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5cK-TO-t4q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -153,6 +153,7 @@
                     </view>
                     <connections>
                         <segue destination="TCV-hw-sMt" kind="presentation" identifier="segueFromHomeToLogin" id="mzg-u5-2ZU"/>
+                        <segue destination="DmA-zW-9OG" kind="presentation" identifier="segueFromHomeToDiningDollars" id="gzb-6e-mLO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1557,13 +1558,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXq-8K-mpg">
-                                <rect key="frame" x="16" y="597" width="343" height="30"/>
+                                <rect key="frame" x="16" y="559" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back to Main Page">
                                     <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="L0d-OK-Xip"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seo-6k-Hbl">
+                                <rect key="frame" x="16" y="597" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="DmA-zW-9OG" eventType="touchUpInside" id="M1X-RG-DsE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1574,18 +1585,21 @@
                             <constraint firstItem="vrR-Nh-ocb" firstAttribute="trailing" secondItem="hm2-M6-oc9" secondAttribute="trailing" constant="16" id="9Hq-jP-8Qv"/>
                             <constraint firstItem="vrR-Nh-ocb" firstAttribute="trailing" secondItem="Ykk-9h-zVZ" secondAttribute="trailing" constant="16" id="9JF-JI-WrP"/>
                             <constraint firstItem="JXq-8K-mpg" firstAttribute="leading" secondItem="vrR-Nh-ocb" secondAttribute="leading" constant="16" id="DBl-if-JsC"/>
+                            <constraint firstItem="Seo-6k-Hbl" firstAttribute="leading" secondItem="vrR-Nh-ocb" secondAttribute="leading" constant="16" id="EMJ-OI-LVb"/>
                             <constraint firstItem="3T1-t5-Bi5" firstAttribute="top" secondItem="hm2-M6-oc9" secondAttribute="bottom" constant="17" id="GlY-aE-gh0"/>
                             <constraint firstItem="Ykk-9h-zVZ" firstAttribute="top" secondItem="vrR-Nh-ocb" secondAttribute="top" constant="20" id="IWp-du-VbI"/>
                             <constraint firstItem="HJ0-60-qWi" firstAttribute="leading" secondItem="vrR-Nh-ocb" secondAttribute="leading" constant="16" id="KRR-Xv-qIK"/>
                             <constraint firstItem="Pzw-ud-wl3" firstAttribute="top" secondItem="Z1k-86-lsg" secondAttribute="bottom" constant="19" id="LY3-9e-aAJ"/>
+                            <constraint firstItem="vrR-Nh-ocb" firstAttribute="trailing" secondItem="Seo-6k-Hbl" secondAttribute="trailing" constant="16" id="OS1-27-fbb"/>
                             <constraint firstItem="SNr-1P-id4" firstAttribute="top" secondItem="Ykk-9h-zVZ" secondAttribute="bottom" constant="66" id="OTT-IC-Bbr"/>
+                            <constraint firstItem="Seo-6k-Hbl" firstAttribute="top" secondItem="JXq-8K-mpg" secondAttribute="bottom" constant="8" id="R7S-0D-4TZ"/>
                             <constraint firstItem="Z1k-86-lsg" firstAttribute="leading" secondItem="vrR-Nh-ocb" secondAttribute="leading" constant="16" id="To5-uU-Vf1"/>
                             <constraint firstItem="Ykk-9h-zVZ" firstAttribute="leading" secondItem="vrR-Nh-ocb" secondAttribute="leading" constant="16" id="f5W-7w-BbX"/>
                             <constraint firstItem="HJ0-60-qWi" firstAttribute="top" secondItem="Pzw-ud-wl3" secondAttribute="bottom" constant="17" id="gjI-K3-Dir"/>
                             <constraint firstItem="Z1k-86-lsg" firstAttribute="top" secondItem="Ykk-9h-zVZ" secondAttribute="bottom" constant="66" id="h8y-WP-xro"/>
                             <constraint firstItem="Pzw-ud-wl3" firstAttribute="leading" secondItem="vrR-Nh-ocb" secondAttribute="leading" constant="16" id="hK6-nd-xSk"/>
                             <constraint firstItem="vrR-Nh-ocb" firstAttribute="trailing" secondItem="SNr-1P-id4" secondAttribute="trailing" constant="16" id="p5v-by-exY"/>
-                            <constraint firstItem="vrR-Nh-ocb" firstAttribute="bottom" secondItem="JXq-8K-mpg" secondAttribute="bottom" constant="20" id="u79-Wo-0go"/>
+                            <constraint firstItem="vrR-Nh-ocb" firstAttribute="bottom" secondItem="Seo-6k-Hbl" secondAttribute="bottom" constant="20" id="qwu-kf-qLI"/>
                             <constraint firstItem="vrR-Nh-ocb" firstAttribute="trailing" secondItem="3T1-t5-Bi5" secondAttribute="trailing" constant="16" id="xnI-PJ-6Im"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vrR-Nh-ocb"/>
@@ -1594,6 +1608,7 @@
                         <outlet property="residentialDiningBucksLabel" destination="hm2-M6-oc9" id="yU4-uI-N9C"/>
                         <outlet property="residentialMealPlanLabel" destination="SNr-1P-id4" id="GY6-yE-OnX"/>
                         <outlet property="studentEagleBucksLabel" destination="3T1-t5-Bi5" id="Ym0-Jz-gts"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueFromDiningDollarsToHome" id="JVa-c7-WNr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9Z-NB-Jt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1965,8 +1980,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="FyF-ur-hlm"/>
-        <segue reference="Mpf-Kj-rLN"/>
+        <segue reference="mzg-u5-2ZU"/>
         <segue reference="9jY-Hk-Q24"/>
-        <segue reference="cFZ-LU-x4J"/>
+        <segue reference="JVa-c7-WNr"/>
     </inferredMetricsTieBreakers>
 </document>
