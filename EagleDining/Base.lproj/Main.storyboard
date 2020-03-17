@@ -1613,7 +1613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9Z-NB-Jt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3485.5999999999999" y="-1346.176911544228"/>
+            <point key="canvasLocation" x="3718" y="-1346"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="S87-gZ-xAu">
@@ -1688,7 +1688,7 @@
                                     <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aB7-Pu-KzR" kind="presentation" id="FyF-ur-hlm"/>
+                                    <segue destination="5n4-ti-sMo" kind="presentation" id="Kxr-uF-dQk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1723,7 +1723,6 @@
                     <connections>
                         <outlet property="emailField" destination="zWE-TR-C2u" id="oDB-OR-mVP"/>
                         <outlet property="passwordField" destination="fyq-hg-9rZ" id="ZSn-gB-3N2"/>
-                        <segue destination="aB7-Pu-KzR" kind="presentation" identifier="segueFromLoginToSignUp" id="yd2-zq-Bqc"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueFromLogInToMain" id="uOG-5f-d92"/>
                     </connections>
                 </viewController>
@@ -1895,7 +1894,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shD-6H-OiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2832.8000000000002" y="-2116.1919040479761"/>
+            <point key="canvasLocation" x="3718" y="-2116"/>
         </scene>
         <!--Forgot Password Controller-->
         <scene sceneID="NrQ-Bi-CPb">
@@ -1977,11 +1976,75 @@
             </objects>
             <point key="canvasLocation" x="724" y="-2116"/>
         </scene>
+        <!--Privacy View Controller-->
+        <scene sceneID="Iyq-ah-30p">
+            <objects>
+                <viewController id="5n4-ti-sMo" customClass="PrivacyViewController" customModule="EagleDining" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9jy-FO-kh9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Note on Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPh-gh-CqK">
+                                <rect key="frame" x="16" y="20" width="343" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQS-R1-TQr">
+                                <rect key="frame" x="16" y="591" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="7We-g7-jG8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1L-50-5yr">
+                                <rect key="frame" x="16" y="547" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Continue to Sign Up">
+                                    <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aB7-Pu-KzR" kind="presentation" id="aeA-Fd-bmg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-Ip-m4J">
+                                <rect key="frame" x="16" y="76" width="343" height="263"/>
+                                <string key="text">In order to read and display your dining dollar balance, you'll need to enter your Agora username and password. This is sensitive data, and will stay on your iphone locally. It will not be stored anywhere else. We know this is a bit akward, but it's important to us so we wanted to make it clear. If you don't feel comfortable will this, you can continue to use the rest of this app simply without this one feature.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.91075617070000003" green="0.90212351079999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CAt-2a-DCd" firstAttribute="trailing" secondItem="qgy-Ip-m4J" secondAttribute="trailing" constant="16" id="A3a-66-xY9"/>
+                            <constraint firstItem="O1L-50-5yr" firstAttribute="leading" secondItem="CAt-2a-DCd" secondAttribute="leading" constant="16" id="A7V-v6-w3g"/>
+                            <constraint firstItem="dQS-R1-TQr" firstAttribute="leading" secondItem="CAt-2a-DCd" secondAttribute="leading" constant="16" id="CjX-JV-CiN"/>
+                            <constraint firstItem="dQS-R1-TQr" firstAttribute="top" secondItem="O1L-50-5yr" secondAttribute="bottom" constant="8" id="HiN-N3-9xE"/>
+                            <constraint firstItem="qgy-Ip-m4J" firstAttribute="leading" secondItem="CAt-2a-DCd" secondAttribute="leading" constant="16" id="LfJ-Ot-mXo"/>
+                            <constraint firstItem="CAt-2a-DCd" firstAttribute="bottom" secondItem="dQS-R1-TQr" secondAttribute="bottom" constant="20" id="RjA-QJ-D02"/>
+                            <constraint firstItem="qgy-Ip-m4J" firstAttribute="top" secondItem="OPh-gh-CqK" secondAttribute="bottom" constant="8" id="Rqy-NR-k0h"/>
+                            <constraint firstItem="CAt-2a-DCd" firstAttribute="trailing" secondItem="OPh-gh-CqK" secondAttribute="trailing" constant="16" id="bWS-2g-Wfg"/>
+                            <constraint firstItem="CAt-2a-DCd" firstAttribute="trailing" secondItem="O1L-50-5yr" secondAttribute="trailing" constant="16" id="nFI-MH-W2O"/>
+                            <constraint firstItem="CAt-2a-DCd" firstAttribute="trailing" secondItem="dQS-R1-TQr" secondAttribute="trailing" constant="16" id="uF2-xl-gWL"/>
+                            <constraint firstItem="OPh-gh-CqK" firstAttribute="top" secondItem="CAt-2a-DCd" secondAttribute="top" constant="20" id="unl-cn-RVU"/>
+                            <constraint firstItem="OPh-gh-CqK" firstAttribute="leading" secondItem="CAt-2a-DCd" secondAttribute="leading" constant="16" id="v9R-bd-o9r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CAt-2a-DCd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjb-MV-ZxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2784.8000000000002" y="-2116.1919040479761"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FyF-ur-hlm"/>
-        <segue reference="mzg-u5-2ZU"/>
+        <segue reference="aeA-Fd-bmg"/>
+        <segue reference="Lp0-HR-1yX"/>
         <segue reference="9jY-Hk-Q24"/>
-        <segue reference="JVa-c7-WNr"/>
+        <segue reference="7We-g7-jG8"/>
     </inferredMetricsTieBreakers>
 </document>
