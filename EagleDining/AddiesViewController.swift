@@ -8,6 +8,7 @@
 import UIKit
 import SwiftSoup
 import Firebase
+import Mixpanel
 
 class AddiesViewController: UIViewController {
     
@@ -130,6 +131,17 @@ class AddiesViewController: UIViewController {
         return lateNightItems
     }
     
+    
+    @IBAction func mainMenuPressed(_ sender: UIButton) {
+        Mixpanel.mainInstance().track(event: "main_menu_pressed")
+    }
+    
+    
+    @IBAction func reportIssuePressed(_ sender: UIButton) {
+        Analytics.logEvent("report_issue_pressed_addies", parameters: nil)
+        Mixpanel.mainInstance().track(event: "report_issue_pressed")
+    }
+    
 }
 
 extension AddiesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -139,8 +151,10 @@ extension AddiesViewController: UITableViewDelegate, UITableViewDataSource {
         switch mealTime.selectedSegmentIndex {
         case 0:
             mealItems = formatDinner(allItems: addiesMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_dinner")
         case 1:
             mealItems = formatLateNight(allItems: addiesMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_late_night")
         default:
             mealItems = formatDinner(allItems: addiesMenuItems)
         }

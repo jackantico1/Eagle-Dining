@@ -8,6 +8,7 @@
 import UIKit
 import SwiftSoup
 import Firebase
+import Mixpanel
 
 class TheRatViewController: UIViewController {
     
@@ -108,6 +109,16 @@ class TheRatViewController: UIViewController {
         return lunchItems
     }
     
+    @IBAction func mainMenuPressed(_ sender: UIButton) {
+        Mixpanel.mainInstance().track(event: "main_menu_pressed")
+    }
+    
+    
+    @IBAction func reportIssuePressed(_ sender: UIButton) {
+        Analytics.logEvent("report_issue_pressed_the_rat", parameters: nil)
+        Mixpanel.mainInstance().track(event: "report_issue_pressed")
+    }
+    
 }
 
 extension TheRatViewController: UITableViewDelegate, UITableViewDataSource {
@@ -117,8 +128,10 @@ extension TheRatViewController: UITableViewDelegate, UITableViewDataSource {
         switch mealTime.selectedSegmentIndex {
         case 0:
             mealItems = formatBreakfast(allItems: theRatMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_breakfast")
         case 1:
             mealItems = formatLunch(allItems: theRatMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_lunch")
         default:
             mealItems = formatLunch(allItems: theRatMenuItems)
         }

@@ -8,6 +8,7 @@
 import UIKit
 import SwiftSoup
 import Firebase
+import Mixpanel
 
 class ChocolateBarViewController: UIViewController {
     
@@ -82,6 +83,17 @@ class ChocolateBarViewController: UIViewController {
         }
         return menuItems
     }
+    
+    @IBAction func mainMenuPressed(_ sender: UIButton) {
+        Mixpanel.mainInstance().track(event: "main_menu_pressed")
+    }
+    
+    
+    @IBAction func reportIssuePressed(_ sender: UIButton) {
+        Analytics.logEvent("report_issue_pressed_chocolate_bar", parameters: nil)
+        Mixpanel.mainInstance().track(event: "report_issue_pressed")
+    }
+    
     
 }
 

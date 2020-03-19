@@ -8,6 +8,7 @@
 import UIKit
 import SwiftSoup
 import Firebase
+import Mixpanel
 
 class NewtonViewController: UIViewController {
     
@@ -153,6 +154,17 @@ class NewtonViewController: UIViewController {
         }
         return lateNightItems
     }
+    
+    @IBAction func mainMenuPressed(_ sender: UIButton) {
+        Mixpanel.mainInstance().track(event: "main_menu_pressed")
+    }
+    
+    
+    @IBAction func reportIssuePressed(_ sender: UIButton) {
+        Analytics.logEvent("report_issue_pressed_newton", parameters: nil)
+        Mixpanel.mainInstance().track(event: "report_issue_pressed")
+    }
+    
     
 }
 

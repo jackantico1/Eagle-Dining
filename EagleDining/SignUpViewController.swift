@@ -6,9 +6,9 @@
 //  Copyright © 2019 Jack Antico. All rights reserved.
 //
 
-import Foundation
-import SwiftSoup
+import UIKit
 import Firebase
+import Mixpanel
 
 class SignUpController: UIViewController {
     
@@ -21,6 +21,7 @@ class SignUpController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        sendEventToMixpanel()
     }
     
     @IBAction func signUpClicked(_ sender: UIButton) {
@@ -41,21 +42,24 @@ class SignUpController: UIViewController {
                 var ref: DatabaseReference!
                 ref = Database.database().reference()
                 ref.child("users/\(user.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
-                    ref.child("users/\(user.uid)").setValue(["agoraUsername": agoraUsername, "agoraPassword": agoraPassword, "email": email, "classYear": classYear])
+                    ref.child("users/\(user.uid)").setValue(["email": email, "classYear": classYear])
                 }) { (error) in
-                    print("ERROR (SignUpViewController1):" + error.localizedDescription)
+                    let alert = UIAlertController(title: "ERROR!!!", message: "\(error.localizedDescription)", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
-                
+                Mixpanel.mainInstance().track(event: "signed_up_succesfully")
                 self.performSegue(withIdentifier: "segueFromSignUpToMain", sender: nil)
             } else {
                 let alert = UIAlertController(title: "ERROR!!!", message: "\(error!.localizedDescription)", preferredStyle: UIAlertController.Style.alert)
-                print("ERROR (SignUpController2): Couldn't make the user")
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
         }
-        
     }
     
+    func sendEventToMixpanel() {
+        Mixpanel.mainInstance().track(event: "sign_up_page_visited")
+    }
     
 }

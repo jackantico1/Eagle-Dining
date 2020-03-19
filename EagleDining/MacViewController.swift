@@ -8,10 +8,9 @@
 import UIKit
 import SwiftSoup
 import Firebase
+import Mixpanel
 
 class MacViewController: UIViewController {
-    
-    
 
     @IBOutlet weak var mealTime: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
@@ -30,44 +29,7 @@ class MacViewController: UIViewController {
         bgView.backgroundColor = UIColor.init(red: 148.0/256.0, green: 23.0/256.0, blue: 81.0/256.0, alpha: 1.0)
         self.tableView.backgroundView = bgView
         
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        ref.child("buttonUsage").observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let macUsage = value?["macUsage"] as? Int ?? 0
-            ref.child("buttonUsage/macUsage").setValue(macUsage + 1)
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        
-        let url = NSURL(string: "http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=23&locationName=Carney%27s&naFlag=1")
-        if url != nil {
-            let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
-                if error == nil {
-                    let urlContent = NSString(data: data!, encoding: String.Encoding.ascii.rawValue) as NSString!
-                    do {
-                        let html: String = urlContent! as String
-                        let els: Elements = try SwiftSoup.parse(html).getElementsByClass("shortmenurecipes")
-                        for link: Element in els.array() {
-                            let linkText: String = try link.text()
-                            self.macMenuItems.append(linkText)
-                        }
-                        
-                        
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                        
-                    } catch Exception.Error(let type, let message) {
-                        print(message)
-                    } catch {
-                        print("error")
-                    }
-                }
-            })
-            task.resume()
-            
-        }
+        updateButtonPressedData()
     }
     
     
@@ -77,7 +39,6 @@ class MacViewController: UIViewController {
     
     
     func formatBreakfast(allItems: [String]) -> [String] {
-        
         var leftBreakfast = false
         var breakfastItems = [String()]
         
@@ -108,11 +69,9 @@ class MacViewController: UIViewController {
         }
         
         return breakfastItems
-        
     }
     
     func formatLunch(allItems: [String]) -> [String] {
-        
         var hitLunch = false
         var lunchItems = [String()]
         
@@ -149,13 +108,9 @@ class MacViewController: UIViewController {
         }
         
         return lunchItems
-        
     }
     
     func formatDinner(allItems: [String]) -> [String] {
-        
-        // This is always the same no matter the day of the week.
-        
         var counter1 = 1
         var counter2 = 0
         var dinnerItems = [String()]
@@ -184,7 +139,6 @@ class MacViewController: UIViewController {
     }
     
     func formatLateNight(allItems: [String]) -> [String] {
-        
         var counter1 = 0
         var hitLateNight = false
         var lateNightItems = [String()]
@@ -202,7 +156,6 @@ class MacViewController: UIViewController {
             if hitLateNight {
                 lateNightItems.append(item)
             }
-            
         }
         
         if lateNightItems.count > 2 {
@@ -214,6 +167,29 @@ class MacViewController: UIViewController {
         return lateNightItems
     }
     
+    func updateButtonPressedData() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("buttonUsage").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let macUsage = value?["macUsage"] as? Int ?? 0
+            ref.child("buttonUsage/macUsage").setValue(macUsage + 1)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    @IBAction func mainMenuPressed(_ sender: UIButton) {
+        Mixpanel.mainInstance().track(event: "main_menu_pressed")
+    }
+    
+    
+    @IBAction func reportIssuePressed(_ sender: UIButton) {
+        Analytics.logEvent("report_issue_pressed_mac", parameters: nil)
+        Mixpanel.mainInstance().track(event: "report_issue_pressed")
+    }
+    
+    
 }
 
 extension MacViewController: UITableViewDelegate, UITableViewDataSource {
@@ -223,12 +199,16 @@ extension MacViewController: UITableViewDelegate, UITableViewDataSource {
         switch mealTime.selectedSegmentIndex {
         case 0:
             mealItems = formatBreakfast(allItems: macMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_breakfast")
         case 1:
             mealItems = formatLunch(allItems: macMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_lunch")
         case 2:
             mealItems = formatDinner(allItems: macMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_dinner")
         case 3:
             mealItems = formatLateNight(allItems: macMenuItems)
+            Mixpanel.mainInstance().track(event: "viewed_latenight")
         default:
             mealItems = formatDinner(allItems: macMenuItems)
         }
@@ -257,38 +237,4 @@ extension MacViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.textColor = UIColor.init(red: 255.0/256.0, green: 251.0/256.0, blue: 0.0/256.0, alpha: 1.0)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        let breakfastItems = formatBreakfast(allItems: macMenuItems)
-        let lunchItems = formatLunch(allItems: macMenuItems)
-        let dinnerItems = formatDinner(allItems: macMenuItems)
-        let lateNightItems = formatLateNight(allItems: macMenuItems)
-        var mealItem = ""
-
-        switch mealTime.selectedSegmentIndex {
-            case 0:
-                mealItem = breakfastItems[indexPath.row]
-                print("You selected \(breakfastItems[indexPath.row])")
-            case 1:
-                mealItem = lunchItems[indexPath.row]
-                print("You selected \(lunchItems[indexPath.row])")
-            case 2:
-                mealItem = dinnerItems[indexPath.row]
-                print("You selected \(dinnerItems[indexPath.row])")
-            case 3:
-                mealItem = lateNightItems[indexPath.row]
-                print("You selected \(lateNightItems[indexPath.row])")
-            default:
-                mealItem = dinnerItems[indexPath.row]
-                print("You selected \(dinnerItems[indexPath.row])")
-        }
-    
-        //performSegue(withIdentifier: "segueFromMacToNutrients", sender: Any?.self)
-        
-        
-        
-    }
-
 }

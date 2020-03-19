@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Mixpanel
 
 class PrivacyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sendEventToMixpanel()
+    }
+    
+    func sendEventToMixpanel() {
+        Mixpanel.mainInstance().track(event: "privacy_page_visited")
     }
     
 }

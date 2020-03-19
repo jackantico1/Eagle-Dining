@@ -6,8 +6,7 @@
 //  Copyright © 2020 Jack Antico. All rights reserved.
 //
 
-import Foundation
-import SwiftSoup
+import UIKit
 import Firebase
 
 class ForgotPasswordController: UIViewController {
@@ -18,7 +17,6 @@ class ForgotPasswordController: UIViewController {
         super.viewDidLoad()
         
     }
-    
     
     @IBAction func sendPasswordResetPressed(_ sender: UIButton) {
         

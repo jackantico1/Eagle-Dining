@@ -6,9 +6,9 @@
 //  Copyright © 2019 Jack Antico. All rights reserved.
 //
 
-import Foundation
-import SwiftSoup
+import UIKit
 import Firebase
+import Mixpanel
 
 class LoginController: UIViewController {
     
@@ -17,9 +17,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        sendEventToMixpanel()
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
@@ -27,15 +25,17 @@ class LoginController: UIViewController {
         let password = passwordField?.text ?? "Invalid password"
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
             if error == nil {
-                print("LogInViewController: User was succesfully signed in")
                 self?.performSegue(withIdentifier: "segueFromLogInToMain", sender: nil)
             } else {
-                print("There was an error in login controller")
                 let alert = UIAlertController(title: "Error", message: "\(error!.localizedDescription)", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self?.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    func sendEventToMixpanel() {
+        Mixpanel.mainInstance().track(event: "log_in_page_visited")
     }
     
 }

@@ -27,7 +27,6 @@
 		5979C1FE221E448A0043AD84 /* EaglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1FD221E448A0043AD84 /* EaglesViewController.swift */; };
 		5979C2002220554F0043AD84 /* ReportIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979C1FF2220554F0043AD84 /* ReportIssueViewController.swift */; };
 		598E032323C630AE001C89F0 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E032223C630AE001C89F0 /* ForgotPasswordController.swift */; };
-		59CD95DC234EA9CF00CA8EA5 /* NutrientsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CD95DB234EA9CF00CA8EA5 /* NutrientsController.swift */; };
 		59CE6A1924205DAC00A06883 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE6A1824205DAC00A06883 /* PrivacyViewController.swift */; };
 		59EBD81D231CC4DD00540E4F /* DiningDollarsBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBD81C231CC4DD00540E4F /* DiningDollarsBalanceController.swift */; };
 		59EBD81F231CC6FB00540E4F /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBD81E231CC6FB00540E4F /* LogInController.swift */; };
@@ -76,7 +75,6 @@
 		5979C1FD221E448A0043AD84 /* EaglesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaglesViewController.swift; sourceTree = "<group>"; };
 		5979C1FF2220554F0043AD84 /* ReportIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIssueViewController.swift; sourceTree = "<group>"; };
 		598E032223C630AE001C89F0 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
-		59CD95DB234EA9CF00CA8EA5 /* NutrientsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutrientsController.swift; sourceTree = "<group>"; };
 		59CE6A1824205DAC00A06883 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		59EBD81C231CC4DD00540E4F /* DiningDollarsBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningDollarsBalanceController.swift; sourceTree = "<group>"; };
 		59EBD81E231CC6FB00540E4F /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -139,13 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				59069FF721A3D34800C286AF /* AppDelegate.swift */,
-				59069FF921A3D34800C286AF /* ViewController.swift */,
 				59EBD81E231CC6FB00540E4F /* LogInController.swift */,
 				598E032223C630AE001C89F0 /* ForgotPasswordController.swift */,
 				59EBD820231CC74C00540E4F /* SignUpViewController.swift */,
 				59CE6A1824205DAC00A06883 /* PrivacyViewController.swift */,
-				59EBD81C231CC4DD00540E4F /* DiningDollarsBalanceController.swift */,
-				59CD95DB234EA9CF00CA8EA5 /* NutrientsController.swift */,
+				59069FF921A3D34800C286AF /* ViewController.swift */,
 				5906A02521A3D40D00C286AF /* MacViewController.swift */,
 				5970D3F72207F42600B06325 /* LowerViewController.swift */,
 				5979C1F3221E44010043AD84 /* AddiesViewController.swift */,
@@ -154,6 +150,7 @@
 				5979C1F9221E44380043AD84 /* NewtonViewController.swift */,
 				5979C1FB221E444C0043AD84 /* HillsideViewController.swift */,
 				5979C1F7221E44280043AD84 /* ChocolateBarViewController.swift */,
+				59EBD81C231CC4DD00540E4F /* DiningDollarsBalanceController.swift */,
 				5979C1FF2220554F0043AD84 /* ReportIssueViewController.swift */,
 				59069FFB21A3D34800C286AF /* Main.storyboard */,
 				59069FFE21A3D34A00C286AF /* Assets.xcassets */,
@@ -393,7 +390,6 @@
 				59069FF821A3D34800C286AF /* AppDelegate.swift in Sources */,
 				59CE6A1924205DAC00A06883 /* PrivacyViewController.swift in Sources */,
 				5979C1FA221E44380043AD84 /* NewtonViewController.swift in Sources */,
-				59CD95DC234EA9CF00CA8EA5 /* NutrientsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
