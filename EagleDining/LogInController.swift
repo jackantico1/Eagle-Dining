@@ -18,6 +18,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sendEventToMixpanel()
+        self.hideKeyboardWhenTappedAround() 
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
@@ -38,4 +39,18 @@ class LoginController: UIViewController {
         Mixpanel.mainInstance().track(event: "log_in_page_visited")
     }
     
+    
+    
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

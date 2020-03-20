@@ -22,6 +22,7 @@ class SignUpController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sendEventToMixpanel()
+        self.hideKeyboardWhenTappedAround() 
     }
     
     @IBAction func signUpClicked(_ sender: UIButton) {
