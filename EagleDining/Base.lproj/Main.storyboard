@@ -1687,7 +1687,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xr-Ye-bk0">
-                                <rect key="frame" x="16" y="595" width="343" height="32"/>
+                                <rect key="frame" x="16" y="555" width="343" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1697,7 +1697,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxc-0t-Kii">
-                                <rect key="frame" x="16" y="507" width="343" height="36"/>
+                                <rect key="frame" x="16" y="467" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1707,7 +1707,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV4-ts-gXr">
-                                <rect key="frame" x="16" y="551" width="343" height="36"/>
+                                <rect key="frame" x="16" y="511" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1716,10 +1716,19 @@
                                     <segue destination="5n4-ti-sMo" kind="presentation" id="Kxr-uF-dQk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-nL-BPd">
+                                <rect key="frame" x="16" y="595" width="343" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.90196078430000004" green="0.88758748769999996" blue="0.28998625280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="bpe-uf-4Yw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qEn-jU-Jtu" firstAttribute="bottom" secondItem="4xr-Ye-bk0" secondAttribute="bottom" constant="20" id="0lH-6w-qwi"/>
                             <constraint firstItem="6qa-g2-nai" firstAttribute="top" secondItem="qEn-jU-Jtu" secondAttribute="top" constant="20" id="0te-tS-VAF"/>
                             <constraint firstItem="qEn-jU-Jtu" firstAttribute="trailing" secondItem="Vfy-6f-8iE" secondAttribute="trailing" constant="120" id="3PK-ug-UwI"/>
                             <constraint firstItem="4xr-Ye-bk0" firstAttribute="top" secondItem="MV4-ts-gXr" secondAttribute="bottom" constant="8" id="3U5-Hy-suB"/>
@@ -1728,11 +1737,14 @@
                             <constraint firstItem="4xr-Ye-bk0" firstAttribute="leading" secondItem="qEn-jU-Jtu" secondAttribute="leading" constant="16" id="Jr4-Xl-cZ3"/>
                             <constraint firstItem="6qa-g2-nai" firstAttribute="leading" secondItem="qEn-jU-Jtu" secondAttribute="leading" constant="16" id="Kpg-gf-BCd"/>
                             <constraint firstItem="qEn-jU-Jtu" firstAttribute="trailing" secondItem="Yjn-fg-89m" secondAttribute="trailing" constant="122" id="LeE-nP-ZWX"/>
+                            <constraint firstItem="cKL-nL-BPd" firstAttribute="leading" secondItem="qEn-jU-Jtu" secondAttribute="leading" constant="16" id="NLj-Lj-EME"/>
                             <constraint firstItem="Vfy-6f-8iE" firstAttribute="top" secondItem="Yjn-fg-89m" secondAttribute="bottom" constant="39.5" id="NXK-WD-cYz"/>
                             <constraint firstItem="MV4-ts-gXr" firstAttribute="top" secondItem="Wxc-0t-Kii" secondAttribute="bottom" constant="8" id="OLL-V6-WqZ"/>
                             <constraint firstItem="Wxc-0t-Kii" firstAttribute="leading" secondItem="qEn-jU-Jtu" secondAttribute="leading" constant="16" id="QMb-E4-ZWE"/>
+                            <constraint firstItem="qEn-jU-Jtu" firstAttribute="bottom" secondItem="cKL-nL-BPd" secondAttribute="bottom" constant="20" id="RiH-4Z-s7k"/>
                             <constraint firstItem="qEn-jU-Jtu" firstAttribute="trailing" secondItem="MV4-ts-gXr" secondAttribute="trailing" constant="16" id="XGL-z3-G1P"/>
                             <constraint firstItem="MV4-ts-gXr" firstAttribute="leading" secondItem="qEn-jU-Jtu" secondAttribute="leading" constant="16" id="Xjm-p4-KiD"/>
+                            <constraint firstItem="cKL-nL-BPd" firstAttribute="top" secondItem="4xr-Ye-bk0" secondAttribute="bottom" constant="8" id="ZXe-se-Gf3"/>
                             <constraint firstItem="MV4-ts-gXr" firstAttribute="top" secondItem="Wxc-0t-Kii" secondAttribute="bottom" constant="8" id="avG-f6-BPv"/>
                             <constraint firstItem="Vfy-6f-8iE" firstAttribute="leading" secondItem="qEn-jU-Jtu" secondAttribute="leading" constant="121" id="f7a-0N-Qpt"/>
                             <constraint firstItem="MV4-ts-gXr" firstAttribute="top" secondItem="Wxc-0t-Kii" secondAttribute="bottom" constant="8" id="jKd-3k-5z7"/>
@@ -1741,6 +1753,7 @@
                             <constraint firstItem="MV4-ts-gXr" firstAttribute="leading" secondItem="qEn-jU-Jtu" secondAttribute="leading" constant="16" id="l4O-ZU-755"/>
                             <constraint firstItem="qEn-jU-Jtu" firstAttribute="trailing" secondItem="4xr-Ye-bk0" secondAttribute="trailing" constant="16" id="pg6-wo-tYk"/>
                             <constraint firstItem="qEn-jU-Jtu" firstAttribute="trailing" secondItem="MV4-ts-gXr" secondAttribute="trailing" constant="16" id="qcs-Ur-k35"/>
+                            <constraint firstItem="qEn-jU-Jtu" firstAttribute="trailing" secondItem="cKL-nL-BPd" secondAttribute="trailing" constant="16" id="r45-1q-0Jx"/>
                             <constraint firstItem="qEn-jU-Jtu" firstAttribute="trailing" secondItem="6qa-g2-nai" secondAttribute="trailing" constant="16" id="rEo-UF-sIK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qEn-jU-Jtu"/>
@@ -2067,9 +2080,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LAF-aS-YuK"/>
         <segue reference="Mpf-Kj-rLN"/>
         <segue reference="0fU-nc-cJV"/>
-        <segue reference="uOG-5f-d92"/>
+        <segue reference="L0d-OK-Xip"/>
     </inferredMetricsTieBreakers>
 </document>
